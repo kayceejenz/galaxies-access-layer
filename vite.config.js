@@ -8,9 +8,11 @@ export default defineConfig({
       fileName: (format) => `galaxies-access-layer.${format}.js`,
     },
     rollupOptions: {
-      external: [],
+      external: ["firebase"],
       output: {
-        globals: {},
+        globals: {
+          firebase: "firebase",
+        },
       },
     },
   },
