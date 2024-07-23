@@ -66,7 +66,7 @@ export class GalaxiesAccessLayer {
   }
 
   async getDocs(q) {
-    return await getDoc(q);
+    return await getDocs(q);
   }
 
   async add(collectionName, data) {
