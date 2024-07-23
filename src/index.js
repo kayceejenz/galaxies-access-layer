@@ -45,6 +45,10 @@ export class GalaxiesAccessLayer {
     return this;
   }
 
+  getRef(collectionName) {
+    return collection(this.db, collectionName);
+  }
+
   async add(collectionName, data) {
     try {
       const collectionRef = collection(this.db, collectionName);

@@ -1,6 +1,6 @@
 {
   "name": "galaxies-access-layer",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "galaxies game access layer",
   "main": "dist/galaxies-access-layer.cjs.js",
   "module": "dist/galaxies-access-layer.esm.js",
