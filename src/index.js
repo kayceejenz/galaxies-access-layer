@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app";
-import { getFirestore } from "firebase/firestore";
+import { getFirestore, orderBy, limit, startAt } from "firebase/firestore";
 import {
   collection,
   doc,
@@ -47,6 +47,22 @@ export class GalaxiesAccessLayer {
 
   getRef(collectionName) {
     return collection(this.db, collectionName);
+  }
+
+  orderBy(prop, order) {
+    return orderBy(prop, order);
+  }
+
+  limit(number) {
+    return limit(number);
+  }
+
+  startAt(number) {
+    return startAt(number);
+  }
+
+  cursorQuery(ref, order, startAt) {
+    return query(ref, order, startAt);
   }
 
   async add(collectionName, data) {
